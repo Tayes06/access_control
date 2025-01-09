@@ -16,10 +16,12 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(widget.url)
-      ..initialize().then((_) {
-        setState(() {}); // Refresh the screen after initialization
-      });
+    _controller = VideoPlayerController.networkUrl(Uri.parse(widget.url))
+    ..initialize().then((_) {
+      setState(() {}); // Réinitialise l'état après l'initialisation
+    }).catchError((error) {
+      print("Erreur lors de l'initialisation du lecteur vidéo : $error");
+    });
   }
 
   @override
@@ -32,7 +34,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : const CircularProgressIndicator(),
+            : (_controller.value.hasError
+                ? Text('Erreur : Impossible de lire la vidéo.')
+                : const CircularProgressIndicator()),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
