@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "316151000725",
+    "firebase_url": "https://pi-control-5a4bd-default-rtdb.firebaseio.com",
+    "project_id": "pi-control-5a4bd",
+    "storage_bucket": "pi-control-5a4bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316151000725:android:09a149646873a5cf29359c",
+        "android_client_info": {
+          "package_name": "com.example.access_control"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPAO86FUtzTLHFPJD_AI5LkCDgH6p_HL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316151000725:android:cbf1785d5f64973029359c",
+        "android_client_info": {
+          "package_name": "pi.control"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPAO86FUtzTLHFPJD_AI5LkCDgH6p_HL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
